@@ -6,4 +6,4 @@ SELECT
     order_date,
     status,
     _etl_loaded_at
-FROM dbt-tutorial.jaffle_shop.orders 
+FROM {{ source("jaffle_shop", "orders") }}
