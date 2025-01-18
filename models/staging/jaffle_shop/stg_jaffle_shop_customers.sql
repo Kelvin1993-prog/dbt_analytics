@@ -2,11 +2,6 @@
 
 -- let us materialize our customer data as a table in dbt
 
-{{
-    config(
-        materialized = 'table'
-    )
-}}
 
 SELECT 
     id AS customer_id,
