@@ -6,5 +6,5 @@
 SELECT 
     id AS customer_id,
     first_name,
-    last_name,
-FROM dbt-tutorial.jaffle_shop.customers
+    last_name
+FROM {{ source("jaffle_shop", "customers") }}

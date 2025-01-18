@@ -23,4 +23,4 @@ select
         ELSE false
     END AS is_completed_payment,
     created as created_date
-FROM dbt-tutorial.stripe.payment
+FROM {{ source("stripe", "payment") }}
