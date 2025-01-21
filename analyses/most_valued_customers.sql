@@ -6,11 +6,9 @@ dim_customers AS (
     SELECT * FROM {{ ref('dim_customers') }}
 )
 
-SELECT *
-FROM
-       ( SELECT
-            c.customer_id,
-            c.first_name,
+SELECT 
+     c.customer_id,
+     c.first_name,
             SUM(total_amount) AS global_paid_amount
         FROM fct_orders AS o
         LEFT JOIN dim_customers AS c ON o.customer_id = c.customer_id
