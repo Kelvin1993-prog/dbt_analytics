@@ -3,7 +3,7 @@ version: 2
 models:
   - name: stg_jaffle_shop_customers
     config:
-      materialized: view
+      materialized: table
     columns:
       - name: customer_id
         tests:
