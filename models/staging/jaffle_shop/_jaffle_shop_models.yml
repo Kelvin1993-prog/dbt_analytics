@@ -3,7 +3,7 @@ version: 2
 models:
   - name: stg_jaffle_shop_customers
     config:
-      materialized: table
+      materialized: view
     columns:
       - name: customer_id
         tests:
@@ -32,4 +32,4 @@ models:
           - relationships:
               field: customer_id
               to: ref('stg_jaffle_shop_customers')
-          
+        
