@@ -21,3 +21,7 @@ SELECT
 FROM orders AS o 
 LEFT JOIN payment_type_orders AS pt
 ON o.order_id = pt.order_id 
+
+{#add macro check for current environment (dev or deploy or test)
+
+-- {{-  limit_dataset_if_not_deploy_env('order_date', 3) -}}#}
