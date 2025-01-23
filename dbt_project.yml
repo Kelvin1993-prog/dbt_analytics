@@ -46,5 +46,7 @@ models:
       +materialized: view
     marts:
       +materialized: table
+    time_spine:
+      +materialized: table
 
 
