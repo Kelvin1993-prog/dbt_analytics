@@ -1,4 +1,4 @@
-{% macro get_payment_types() -%}
+{% macro get_payment_types1() -%}
 
     {% set payment_type_query %}
         SELECT 
